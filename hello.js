@@ -45,7 +45,9 @@ server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
-7. http://localhost:3000
+7. node hello.js
+
+8. http://localhost:3000
 
 
 
