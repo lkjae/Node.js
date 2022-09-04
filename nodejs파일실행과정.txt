@@ -1,0 +1,8 @@
+mkdir test5
+cd test5
+npm init               ----> package.json 생성
+
+npm install express  ----> node_modules 생성
+
+code app.js	프로그램 작성
+node app.js	서버실행
