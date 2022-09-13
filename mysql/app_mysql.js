@@ -35,3 +35,22 @@ app.post('/api/customer/insert', async(req,res) =>{
     const result = await mysql.query('customerInsert', req.body.param);
     res.send(result);
 });
+
+//고객 정보 수정 라우터
+app.put('/api/customer/update', async (req,res) => {
+    const result = await mysql.query('customerUpdate', req.body.param);
+    res.send(result); //결과를 클라이언트로 보냄
+});
+//'param'키로 2개의 배열에 담아서 보냄
+//첫 번째 배열에 담긴 데이터는 고객 정보 중 수정하려는 필드에 대한 컬렴명과 값
+//두 번째 배열에 담긴 데이터는 customers 테이블에서 변경할 대상이 되는 고객 id 값
+
+//고객 정보 삭제 라우터
+app.delete('/api/customer/delete/:id', async(req,res) =>{
+    const {id} = req.params; //라우트 경로의 :id에 매핑되는 값
+    const result = await mysql.query('customerDelete',id);
+    res.send(result);
+});
+//요청 URL: http://localhost:3000/api/customer/delete/2
+//id 2번을 삭제
+
