@@ -5,7 +5,7 @@ html을 for문 밖에 선언하여 마지막에 보낼 수 있게 하여, 여러
 app.get('/api/customersList', async(req, res) => {
     const customers = await mysql.query('customerList');
     console.log(customers);
-    var html;
+    var html; //var html = ''; << undefined해결
     for(var i in customers){
         html += `
         <table border="1">
