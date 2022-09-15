@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script lang="javascript">
+        function sub(){
+            var num1 = document.all.num1.value;
+            var num2 = document.all.num2.value;
+            document.all.result.value = parseInt(num1) * parseInt(num2);
+
+        }
+
+    </script>
+  
+    <title>곱하기</title>
+</head>
+<body>
+    <input type = "text" name= "num1" size="10"> *
+    <input type= "text" name="num2" size="10">
+    <input type="button" value="곱하기" onclick="sub();"><br><br>
+    <input type = "text" name="result" size="10">
+</body>
+</html>
