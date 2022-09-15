@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 주문현황</h1>
+    <table border="1">
+      
+      
+        <tr>
+            <td>아이디</td>
+            <td>이름</td>
+            <td>제품</td>
+            <td>날짜</td>
+            
+        </tr>
+        <% for(var i=0; i<data.length; i++){%>
+        <tr>
+            <td><%= data[i].id%></td>
+            <td><%= data[i].name%></td>
+            <td><%= data[i].product%></td>
+            <td><%= data[i].buytime%></td>
+        </tr>
+  
+        <% }%>
+    </table>
+    
+</body>
+</html>
